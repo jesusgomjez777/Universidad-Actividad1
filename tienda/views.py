@@ -1,13 +1,21 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
+from django.http import HttpResponse
+from .models import Programa, Curso, Estudiante
 
-def home(request):
-    return render(request, "tienda/home.html", {})
+def lista_programas(request):
+    """Vista para listar todos los programas académicos"""
+    programas = Programa.objects.all()
+    contexto = {'programas': programas}
+    return render(request, 'academia/programas.html', contexto)
 
-'''def lista_productos(request):
-    productos = Producto.objects.all().order_by("nombre")
-    return render(request, "tienda/lista_productos.html", {"productos": productos})
+def lista_cursos(request):
+    """Vista para listar todos los cursos"""
+    cursos = Curso.objects.all()
+    contexto = {'cursos': cursos}
+    return render(request, 'academia/cursos.html', contexto)
 
-def detalle_producto(request, pk):
-    producto = get_object_or_404( Producto, pk=pk)
-    return render(request, "tienda/detalle_producto.html", {"producto": producto})
-'''
+def lista_estudiantes(request):
+    """Vista para listar todos los estudiantes"""
+    estudiantes = Estudiante.objects.all()
+    contexto = {'estudiantes': estudiantes}
+    return render(request, 'academia/estudiantes.html', contexto)
