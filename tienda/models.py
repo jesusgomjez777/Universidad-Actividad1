@@ -33,7 +33,11 @@ class Inscripcion(models.Model):
     fecha_inscripcion = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ('estudiante', 'curso')
+        constraints = [
+            models.UniqueConstraint(
+                fields=["estudiante", "curso"], name="unique_estudiante_curso"
+            )
+        ]
 
     def __str__(self):
         return f"{self.estudiante} - {self.curso}"
