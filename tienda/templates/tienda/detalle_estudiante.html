@@ -1,0 +1,10 @@
+{% extends "tienda/base.html" %}
+
+{% block title %} {{producto.nombre}} {% endblock %}
+
+{% block content %}
+<h1>{{estudiante.nombre}}</h1>
+<p><stong> email:</stong>{{estudiante.email}}</p>
+<p> <stong> Programa:</stong>{{ estudiante.programa.nombre}}</p>
+<p> <stong> Fecha de matricula:</stong>{{estudiante.fecha_matricula}}</p>
+{% endblock %}

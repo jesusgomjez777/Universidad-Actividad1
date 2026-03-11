@@ -1,0 +1,16 @@
+{% extends "tienda/base.html" %}
+
+{% block title %} Estudiante {% endblock %}
+
+{% block content %}
+<h1>¡Estudiante!</h1>
+<ul>
+    {% for e in e %}
+    <li>
+        <a href="{% url 'tienda:detalle_estudiante' e.pk %}">
+            {{estudiante.nombre}}</a>
+    </li>
+    {%endfor%}
+</ul>
+{% endblock %}
+

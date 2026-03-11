@@ -1,0 +1,16 @@
+{% extends "tienda/base.html" %}
+
+{% block title %} {{programa.nombre}} {% endblock %}
+
+{% block content %}
+<h1>{{programa.codigo}}</h1>
+<p>{{programa.nombre}}</p>
+<p>{{programa.duracion}}</p>
+<ul>
+    {% for curso in programa.cursos.all %}
+        <li>{{ curso.nombre }} ({{ curso.codigo }})</li>
+    {% empty %}
+        <li>No hay cursos en este programa</li>
+    {% endfor %}
+</ul>
+{% endblock %}

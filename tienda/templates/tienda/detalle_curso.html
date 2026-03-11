@@ -1,0 +1,10 @@
+{% extends "tienda/base.html" %}
+
+{% block title %} {{producto.nombre}} {% endblock %}
+
+{% block content %}
+<h1><strong>Código:</strong>{{curso.codigo}}</h1>
+<p><strong>Nombre:</strong>{{curso.nombre}}</p>
+<p><strong>Creditos:</strong>{{curso.creditos}}</p>
+<p><strong>Programa:</strong>{{curso.programa.nombre }}</p>
+{% endblock %}

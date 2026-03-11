@@ -1,0 +1,16 @@
+{% extends "tienda/base.html" %}
+
+{% block title %} Curso {% endblock %}
+
+{% block content %}
+<h1>¡Cursos!</h1>
+<ul>
+    {% for c in c %}
+    <li>
+        <a href="{% url 'tienda:detalle_curso' c.pk %}">
+            {{curso.nombre}} ({{ curso.codigo})</a>
+    </li>
+    {%endfor%}
+</ul>
+{% endblock %}
+
