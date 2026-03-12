@@ -5,10 +5,9 @@
 {% block content %}
 <h1>¡Estudiante!</h1>
 <ul>
-    {% for e in e %}
+    {% for estudiante in estudiantes %}
     <li>
-        <a href="{% url 'tienda:detalle_estudiante' e.pk %}">
-            {{estudiante.nombre}}</a>
+        {{estudiante.nombre}}
     </li>
     {%endfor%}
 </ul>

@@ -1,13 +1,13 @@
 {% extends "tienda/base.html" %}
 
-{% block title %} Producto {% endblock %}
+{% block title %} Programa {% endblock %}
 
 {% block content %}
 <h1>¡Programa!</h1>
 <ul>
-    {% for p in p %}
+    {% for programa in programas %}
     <li>
-        <a href="{% url 'tienda:detalle_programa' p.pk %}">{{programa.nombre}}</a>
+        {{ programa.nombre }} - {{ programa.codigo }}
     </li>
     {%endfor%}
 </ul>

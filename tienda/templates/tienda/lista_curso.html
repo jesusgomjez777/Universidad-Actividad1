@@ -5,10 +5,9 @@
 {% block content %}
 <h1>¡Cursos!</h1>
 <ul>
-    {% for c in c %}
+    {% for curso in cursos %}
     <li>
-        <a href="{% url 'tienda:detalle_curso' c.pk %}">
-            {{curso.nombre}} ({{ curso.codigo})</a>
+            {{curso.nombre}} 
     </li>
     {%endfor%}
 </ul>
