@@ -7,7 +7,8 @@
 <ul>
     {% for estudiante in estudiantes %}
     <li>
-        {{estudiante.nombre}}
+        <a href="{% url 'tienda:detalle_estudiante' estudiante.pk %}">{{estudiante.nombre}}</a>
+       
     </li>
     {%endfor%}
 </ul>

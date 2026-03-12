@@ -3,14 +3,7 @@
 {% block title %} {{programa.nombre}} {% endblock %}
 
 {% block content %}
-<h1>{{programa.codigo}}</h1>
-<p>{{programa.nombre}}</p>
-<p>{{programa.duracion}}</p>
-<ul>
-    {% for curso in programa.cursos.all %}
-        <li>{{ curso.nombre }} ({{ curso.codigo }})</li>
-    {% empty %}
-        <li>No hay cursos en este programa</li>
-    {% endfor %}
-</ul>
+<h1><stong> Codigo del programa: </stong>{{programa.codigo}}</h1>
+<p><stong> Nombre: </stong>{{programa.nombre}}</p>
+<p><stong> Duracion del programa: </stong>{{programa.duracion}}</p>
 {% endblock %}

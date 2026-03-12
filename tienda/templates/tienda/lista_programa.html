@@ -7,7 +7,7 @@
 <ul>
     {% for programa in programas %}
     <li>
-        {{ programa.nombre }} - {{ programa.codigo }}
+       <a href="{% url 'tienda:detalle_programa' programa.pk %}"> {{ programa.nombre }} - {{ programa.codigo }} </a>
     </li>
     {%endfor%}
 </ul>
